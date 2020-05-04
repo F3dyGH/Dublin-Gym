@@ -73,6 +73,35 @@ include('includes/config.php');
 				</div>
 			</div>
 		</div><!-- end: fh5co-parallax -->
+
+<!-- bloc recherche par jour des classes -->
+
+		<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
+			<div class="container">
+				
+				<div class="row animate-box">
+							<div class="single-blog-widget" align="center">
+                               <h2>Day :</h2>
+                                <div class="single-tag" >
+                                   <a href="classes.php" class="btn btn-success">All </a>
+                                   <a href="classes.php?rech=Monday" class="btn btn-success">Monday</a>
+                                   <a href="classes.php?rech=Tuesday" class="btn btn-success">Tuesday</a>
+                                   <a href="classes.php?rech=Wednesday" class="btn btn-success">Wednesday </a>
+                                   <a href="classes.php?rech=Thursday" class="btn btn-success">Thursday </a></li>
+                                   <a href="classes.php?rech=Friday" class="btn btn-success">Friday </a>
+                                   <a href="classes.php?rech=Saturday" class="btn btn-success">Saturday </a>
+                                   <a href="classes.php?rech=Sunday" class="btn btn-success">Sunday</a>
+                               </div>
+                            </div>
+					
+
+
+				</div>
+			</div>
+		</div>
+<!--Fin  bloc recherche par jour des classes -->
+
+
 		<!-- end:fh5co-hero -->
 		<div id="fh5co-programs-section">
 			<div class="container">
@@ -84,343 +113,63 @@ include('includes/config.php');
 						</div>
 					</div>
 				</div>
+
+<?php $query=mysqli_query($con,"select * from classes");
+
+
+if (isset($_GET['rech']))
+{
+
+
+while($row=mysqli_fetch_array($query))
+{
+	if ($_GET['rech']==$row['jour'])
+			{
+?>									
+										
+										
 				<div class="row text-center">
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
 							<img src="images/fit-dumbell.svg" alt="Cycling">
-							<h3>Body Combat</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<h3><?php echo $row['nomcour']?></h3>
+							<small><?php echo $row['start']?>AM-<?php echo $row['end']?>AM</small>
+							<h5>Coach :<?php echo $row['personnel']?></h5>
+							<p><?php echo $row['description']?></p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
+					
+<?php 
+ }
+}
+}
+else
+{
+			while($row=mysqli_fetch_array($query))
+			{
+				
+?>
+											
+				<div class="row text-center">
 					<div class="col-md-4 col-sm-6">
 						<div class="program animate-box">
-							<img src="images/fit-yoga.svg" alt="">
-							<h3>Yoga Programs</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+							<img src="images/fit-dumbell.svg" alt="Cycling">
+							<h3><?php echo $row['nomcour']?></h3>
+							<p><?php echo $row['description']?></p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="program animate-box">
-							<img src="images/fit-cycling.svg" alt="">
-							<h3>Cycling Program</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-							<span><a href="#" class="btn btn-default">Join Now</a></span>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="program animate-box">
-							<img src="images/fit-boxing.svg" alt="Cycling">
-							<h3>Boxing Fitness</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-							<span><a href="#" class="btn btn-default">Join Now</a></span>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="program animate-box">
-							<img src="images/fit-swimming.svg" alt="">
-							<h3>Swimming Program</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-							<span><a href="#" class="btn btn-default">Join Now</a></span>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6">
-						<div class="program animate-box">
-							<img src="images/fit-massage.svg" alt="">
-							<h3>Massage</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
-							<span><a href="#" class="btn btn-default">Join Now</a></span>
-						</div>
-					</div>
+<?php 
+ }
+}
+?>
+					
+					
 				</div>
 			</div>
 		</div>
-		<div id="fh5co-schedule-section" class="fh5co-lightgray-section">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="heading-section text-center animate-box">
-							<h2>Class Schedule</h2>
-							<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-						</div>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-10 col-md-offset-1 text-center">
-						<ul class="schedule">
-							<li><a href="#" class="active" data-sched="sunday">Sunday</a></li>
-							<li><a href="#" data-sched="monday">Monday</a></li>
-							<li><a href="#" data-sched="tuesday">Tuesday</a></li>
-							<li><a href="#" data-sched="wednesday">Wednesday</a></li>
-							<li><a href="#" data-sched="thursday">Thursday</a></li>
-							<li><a href="#" data-sched="monday">Monday</a></li>
-							<li><a href="#" data-sched="saturday">Saturday</a></li>
-						</ul>
-					</div>
-					<div class="row text-center">
-
-						<div class="col-md-12 schedule-container">
-
-							<div class="schedule-content active" data-day="sunday">
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Body Building</h3>
-										<span>John Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-cycling.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-boxing.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
-									</div>
-								</div>
-							</div>
-							<!-- END sched-content -->
-
-							<div class="schedule-content" data-day="monday">
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Body Building</h3>
-										<span>John Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-boxing.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-cycling.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
-									</div>
-								</div>
-								
-							</div>
-							<!-- END sched-content -->
-
-							<div class="schedule-content" data-day="tuesday">
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Body Building</h3>
-										<span>John Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-cycling.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-boxing.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
-									</div>
-								</div>
-							</div>
-							<!-- END sched-content -->
-
-							<div class="schedule-content" data-day="wednesday">
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Body Building</h3>
-										<span>John Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-boxing.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-cycling.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
-									</div>
-								</div>
-							</div>
-							<!-- END sched-content -->
-
-							<div class="schedule-content" data-day="thursday">
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Body Building</h3>
-										<span>John Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-cycling.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-boxing.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
-									</div>
-								</div>
-							</div>
-							<!-- END sched-content -->
-
-							<div class="schedule-content" data-day="friday">
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Body Building</h3>
-										<span>John Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-boxing.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-cycling.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
-									</div>
-								</div>
-							</div>
-							<!-- END sched-content -->
-
-							<div class="schedule-content" data-day="saturday">
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-dumbell.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Body Building</h3>
-										<span>John Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-yoga.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Yoga Programs</h3>
-										<span>James Smith</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-cycling.svg" alt="">
-										<small>06AM-7AM</small>
-										<h3>Cycling Program</h3>
-										<span>Rita Doe</span>
-									</div>
-								</div>
-								<div class="col-md-3 col-sm-6">
-									<div class="program program-schedule">
-										<img src="images/fit-boxing.svg" alt="Cycling">
-										<small>06AM-7AM</small>
-										<h3>Boxing Fitness</h3>
-										<span>John Dose</span>
-									</div>
-								</div>
-							</div>
-							<!-- END sched-content -->
-						</div>
-
-						
-					</div>
-				</div>
-			</div>
-		</div>
+		
 	<?php include('includes/footer.php');?>
 
 	</div>
