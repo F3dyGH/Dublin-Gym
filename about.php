@@ -76,14 +76,15 @@ include('includes/config.php');
 			<div class="container">
 				<div class="row about">
 					<div class="col-md-12 col-md-offset-0">
-						<img class="img-responsive animate-box" src="images/home-image-3.jpg" alt="About">
+						<img class="img-responsive animate-box" src="photos/photo1.jpg" alt="About">
 					</div>
 					<div class="col-md-12 col-md-offset-0 animate-box">
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+						<p>Dublin Gym is covering a unique 2500m² space with its Indoor and Out-door distribution.<br>
+                        Dublin Gym set itself apart from other fitness rooms very early on by offering pre-choreographed group lessons developed by the best international experts in the field of fitness and health.</p>
 						<blockquote>
-						  <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						  <p>Offering quality service and equipped with state-of-the-art equipment, it was the first to be certified by LesMills, the world's No.1 fitness concept, straight from New Zealand.</p>
 						</blockquote>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.</p>
+						<p>Dublin Gym has made it its mission to make fitness a healthy lifestyle, and exists to inspire, supervise, and allow people of all ages to train in a friendly environment where real social ties are woven around the same center of interest: Sport and health.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -101,7 +102,6 @@ include('includes/config.php');
 								<div class="desc">
 									<h3>John Doe</h3>
 									<span>Body Trainer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -117,7 +117,6 @@ include('includes/config.php');
 								<div class="desc">
 									<h3>James Smith</h3>
 									<span>Swimming Trainer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -133,7 +132,6 @@ include('includes/config.php');
 								<div class="desc">
 									<h3>John Doe</h3>
 									<span>Chief Executive Officer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -149,7 +147,6 @@ include('includes/config.php');
 								<div class="desc">
 									<h3>John Doe</h3>
 									<span>Chief Executive Officer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -165,7 +162,6 @@ include('includes/config.php');
 								<div class="desc">
 									<h3>John Doe</h3>
 									<span>Chief Executive Officer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -181,7 +177,6 @@ include('includes/config.php');
 								<div class="desc">
 									<h3>John Doe</h3>
 									<span>Chief Executive Officer</span>
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 									<p class="fh5co-social-icons">
 										<a href="#"><i class="icon-twitter-with-circle"></i></a>
 										<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -209,7 +204,6 @@ include('includes/config.php');
 						<div class="program animate-box">
 							<img src="images/fit-dumbell.svg" alt="Cycling">
 							<h3>Body Combat</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -217,7 +211,6 @@ include('includes/config.php');
 						<div class="program animate-box">
 							<img src="images/fit-yoga.svg" alt="">
 							<h3>Yoga Programs</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -225,7 +218,6 @@ include('includes/config.php');
 						<div class="program animate-box">
 							<img src="images/fit-cycling.svg" alt="">
 							<h3>Cycling Program</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -233,7 +225,6 @@ include('includes/config.php');
 						<div class="program animate-box">
 							<img src="images/fit-boxing.svg" alt="Cycling">
 							<h3>Boxing Fitness</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -241,7 +232,6 @@ include('includes/config.php');
 						<div class="program animate-box">
 							<img src="images/fit-swimming.svg" alt="">
 							<h3>Swimming Program</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -249,7 +239,6 @@ include('includes/config.php');
 						<div class="program animate-box">
 							<img src="images/fit-massage.svg" alt="">
 							<h3>Massage</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
 							<span><a href="#" class="btn btn-default">Join Now</a></span>
 						</div>
 					</div>
@@ -285,4 +274,3 @@ include('includes/config.php');
 
 	</body>
 </html>
-
