@@ -14,6 +14,31 @@ include 'staff-action.php'
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<style type="text/css">
+  #printBox{
+  text-align:center;
+width: 500px;
+  margin:auto;
+}
+ 
+.Printbutton{
+  display:inline-block;
+  color:#fff;
+  cursor:pointer;
+  background-color:#3e87ec;
+  padding:20px;
+  margin:5px;
+}
+ 
+ 
+@media print {
+   
+  .Printbutton{
+display:none;
+}
+   
+}
+</style>
 <head>
     <title><?php echo $vnom;?> <?php echo $vprenom;?></title>
 </head>
@@ -31,5 +56,15 @@ include 'staff-action.php'
 </div>
     </div>
      </div>
+     <div class="Printbutton" onclick="myFunction()" >
+ Imprimer la page</div>
+
+<script>
+function myFunction() {
+    window.print();
+}
+   
+</script>
+  </div>
     </body>
 </html>
