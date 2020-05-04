@@ -77,20 +77,20 @@ error_reporting(0);
 			<section id="banner">
                
 				
-                    <img class="img-responsive" alt="" src="photos/photo1.jpg" data-echo="photos/photos1.jpg<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['video']);?>" width="370" height="350" 
+                    <video autoplay loop muted playsinline  src="photos/video.mp4" 
                 
-           style=" opacity: 30%; align-content: center; -ms-flex-align: center; -moz-transform: translateX(50%) translateY(50%);
+           style=" opacity: 50%; align-content: center; -ms-flex-align: center; -moz-transform: translateX(50%) translateY(50%);
 					-webkit-transform: translateX(50%) translateY(50%);
 					-ms-transform: translateX(50%) translateY(50%);
 					transform: translateX(50%) translateY(50%);
-					bottom: 50%;
-					height: 100%;
+					bottom: 47%;
+					height: 720;
 					min-height: 80%;
 					min-width: 100%;
 					overflow: hidden;
 					position: absolute;
 					right: 50%;
-					width: auto;"/>
+					width: 1280;"/>
 				</section> 
 				<div class="desc animate-box">
 					<div class="container">
