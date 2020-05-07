@@ -1,3 +1,3 @@
 Created by :
-Leader Team
+Leaders Team
 Copyright (C) 2020  
