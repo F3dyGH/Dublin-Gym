@@ -1,4 +1,5 @@
 <footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 			<div id="footer">
 				<div class="container">
 					<div class="row">
@@ -38,6 +39,7 @@
 							</form>
 						</div>
 					</div>
+                    <h4 class=" fh5co-social-icons" style="color:white;"><b>Powered by</b> <span><i class="fas fa-fist-raised"></i></span>Leaders Team</h4>
 					<div class="row copy-right">
 						<div class="col-md-6 col-md-offset-3 text-center">
 							<p class="fh5co-social-icons">
