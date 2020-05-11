@@ -23,7 +23,7 @@
                     <li ><a href="my-account.php"><i class="icon fa fa-user"></i> My Account</a></li>
 					<li><a href="my-wishlist.php"><i class="icon fa fa-heart"></i> Wishlist</a></li>
 					<li><a href="my-cart.php"><i class="icon fa fa-shopping-cart"></i> My Cart</a></li>
-					<li><a href="order-history.php"><i class="icon fa fa-dashboard"></i> Order History</a></li>
+					<li><a href="order-history.php"><i class="icon fa fa-history"></i> Order History</a></li>
                     <li><a href="logout.php"><i class="icon fa fa-sign-out"></i> Logout</a></li>
                     </ul>
                     <div class="cnt-block">
