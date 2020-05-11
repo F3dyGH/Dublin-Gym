@@ -1,20 +1,6 @@
 <?php
 session_start();
 error_reporting(0);
-//include('includes/config.php');
-/*$sql = "SELECT * FROM home";
-		if($_SESSION['home']) {
-		$sql .=$id. ",";
-		}
-		$sql=substr($sql,0,-1) . ") ORDER BY id ASC";
-		$query = mysqli_query($con,$sql);
-		if(!empty($query)){
-		while($row = mysqli_fetch_array($query)){
-			$quantity=$_SESSION['home'][$row['id']]['video'];}
-		}
-*/
- 
-
 ?>
 		
 
@@ -98,7 +84,12 @@ error_reporting(0);
 							<div class="col-md-7">
 								<h2>Fitness &amp; Health <br>is a <b>Mentality</b></h2>
 								<br>
-								<span><a class="btn btn-primary" href="login.php">Login and Start Your Journey</a></span>
+								<?php if(strlen($_SESSION['login'])==0)
+                                {   ?>
+								<span><a class="btn btn-primary" href="login.php">Login and Start Your Journey</a></span> <?php } 
+                                else{ ?>
+                                    <span><a class="btn btn-primary" href="my-account.php">Welcome Back, Check your Informations</a></span>
+                               <?php } ?>
 							</div>
 						</div>
 					</div>
