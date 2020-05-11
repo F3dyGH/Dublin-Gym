@@ -5,7 +5,7 @@
 					<div class="row">
 						<div class="col-md-4 animate-box">
 							<h3 class="section-title">About Us</h3>
-							<p>California Gym, The land of fitness,<br> is the First of fitness clubs in Tunisia to be certified by LesMills, the world's No.1 fitness concept.</p>
+							<p>Dublin Gym, The land of fitness,<br> is the First of fitness clubs in Tunisia to be certified by LesMills, the world's No.1 fitness concept.</p>
                             <h4 style="text-align: center; color: #4CB648;"> Fitness & Health is a Mentality</h4>
 						</div>
 
