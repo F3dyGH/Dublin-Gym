@@ -10,12 +10,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 What things you need to Run the project and how to install them
 
-
-```
 Download a local web server to run the project, click the link below:
     * [Xampp](https://www.apachefriends.org/download.html) - recommended
     * [Wampp](http://wampserver.aviatechno.net/)
-```
+
 
 ### Installing
 
@@ -25,15 +23,15 @@ Download a local web server to run the project, click the link below:
  
 ## Built With
  
- *PHP
- *Javascript
- *Html
- *Css
- *Bootstrap
- *Some Js Frameworks (jQuery and Ajax)
+ * PHP
+ * Javascript
+ * Html
+ * Css
+ * Bootstrap
+ * Some Js Frameworks (jQuery and Ajax)
  ## Authors
  
- #### Leader Team Members: 
+ #### Leaders Team Members: 
  
  * Fedi Said Ghourabi
  * Mohamed Aziz Ghorbel
