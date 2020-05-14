@@ -20,6 +20,55 @@ window.print();
 <title>Order Tracking Details</title>
 <link href="style.css" rel="stylesheet" type="text/css" />
 <link href="anuj.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+  #printBox{
+  text-align:center;
+  width: 500px;
+  margin:auto;
+}
+ 
+.Printbutton{
+  display:inline;
+  color:#fff;
+  cursor:pointer;
+  background-color:green;
+  border-radius: 10px;
+  padding:5px;
+  margin:5px;
+}
+ 
+ 
+@media print {
+   
+  .Printbutton{
+display:none;
+}   
+}
+    
+    #closeBox{
+  text-align:center;
+  width: 500px;
+  margin:auto;
+}
+ 
+.Closebutton{
+  display:inline-table;
+  color:#fff;
+  cursor:pointer;
+  background-color:red;
+  border-radius: 10px;
+  padding:5px;
+  margin:5px;
+}
+@media print {
+   
+  .Closebutton{
+display:none;
+}   
+}
+</style>
+
 </head>
 <body>
 
@@ -85,7 +134,18 @@ $st='Delivered';
   ?>
 </table>
  </form>
-</div>
+<ul class="inline-block" style="list-style-type:none; display:inline;">
+<li><div class="Printbutton" onclick="f3()" >
+ Save & Print</div>
+</li>
+<li><div class="Closebutton" onclick="f2()" >
+ Close Tab</div>
+</li>
+</ul>
 
+
+
+</div>
+ 
 </body>
 </html>
