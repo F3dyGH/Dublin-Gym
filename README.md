@@ -9,10 +9,9 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 What things you need to Run the project and how to install them
-
 Download a local web server to run the project, click the link below:
-    * [Xampp](https://www.apachefriends.org/download.html) - recommended
-    * [Wampp](http://wampserver.aviatechno.net/)
+* [Xampp](https://www.apachefriends.org/download.html) - recommended
+* [Wampp](http://wampserver.aviatechno.net/)
 
 
 ### Installing
