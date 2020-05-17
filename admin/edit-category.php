@@ -113,6 +113,6 @@ while($row=mysqli_fetch_array($query))
 			$('.dataTables_paginate > a:first-child').append('<i class="icon-chevron-left shaded"></i>');
 			$('.dataTables_paginate > a:last-child').append('<i class="icon-chevron-right shaded"></i>');
 		} );
-	</script>
+	</script>.
 </body>
 <?php } ?>
