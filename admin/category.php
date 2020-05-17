@@ -165,4 +165,4 @@ while($row=mysqli_fetch_array($query))
 		} );
 	</script>
 </body>
-<?php } ?>
+<?php } ?>.
