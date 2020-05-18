@@ -94,15 +94,7 @@ if(isset($_POST['submit']))
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
         	<script language="javascript" type="text/javascript">
-var popUpWin=0;
-function popUpWindow(URLStr, left, top, width, height)
-{
- if(popUpWin)
-{
-if(!popUpWin.closed) popUpWin.close();
-}
-popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+600+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
-}
+
 
 </script>
 	</head>
@@ -198,30 +190,31 @@ while ($rws=mysqli_fetch_array($ret)) {
 
 ?>
 
-								        
-													<div class="item">
+					        
+		<div class="item">	
 					<div class="products">
 						<div class="hot-deal-wrapper">
 							<div class="image">
-								<img src="admin/productimages/<?php echo htmlentities($rws['productName']);?>/<?php echo htmlentities($rws['productImage1']);?>"  width="200" height="334" alt="">
+								<img src="admin/productimages/<?php echo($rws['id']);?>/<?php echo($rws['productImage1']);?>"  width="200" height="200" alt="">
 							</div>
 							
 						</div><!-- /.hot-deal-wrapper -->
 
 						<div class="product-info text-left m-t-20">
-							<h3 class="name"><a href="product-details.php?pid=<?php echo htmlentities($rws['id']);?>"><?php echo htmlentities($rws['productName']);?></a></h3>
+							<h3 class="name"><a href="product-details.php?pid=<?php echo($rws['id']);?>"><?php echo($rws['productName']);?></a></h3>
 							<div class="rating rateit-small"></div>
 
 							<div class="product-price">	
 								<span class="price">
-									DT. <?php echo htmlentities($rws['productPrice']);?>.00
+									DT. <?php echo($rws['productPrice']);?>.00
 								</span>
 									
-							    <span class="price-before-discount">DT.<?php echo htmlentities($row['productPriceBeforeDiscount']);?></span>					
+							    <span class="price-before-discount">DT.<?php echo($row['productPriceBeforeDiscount']);?></span>					
 							
 							</div><!-- /.product-price -->
 							
 						</div><!-- /.product-info -->
+						
                         
 						<div class="cart clearfix animate-effect">
 							<div class="action">
@@ -257,21 +250,29 @@ while($row=mysqli_fetch_array($ret))
 ?>
 
 
-			<div class='col-md-9'>
+<div class='col-md-9'>
+
 				<div class="row  wow fadeInUp">
 					     <div class="col-xs-12 col-sm-6 col-md-5 gallery-holder">
     <div class="product-item-holder size-big single-product-gallery small-gallery">
 
         <div id="owl-single-product">
 
- <div class="single-product-gallery-item" id="slide1">
-                <a data-lightbox="image-1" data-title="<?php echo htmlentities($row['productName']);?>" href="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>">
-                    <img class="img-responsive" alt="" src="assets/images/blank.gif" data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>" width="370" height="350" />
-                </a>
-            </div>
+		<div class="image">
+								<img src="admin/productimages/<?php echo($rws['id']);?>/<?php echo($rws['productImage1']);?>"  width="200" height="200" alt="">
+							</div>
 
+
+
+
+            <div class="single-product-gallery-item" id="slide1">
+                <a data-lightbox="image-1" data-title="<?php echo htmlentities($row['productName']);?>" href="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>">
+                    <img class="img-responsive" alt="" src="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>" width="370" height="350" />
+                </a>
+            </div><!-- /.single-product-gallery-item -->
 
         </div><!-- /.single-product-slider -->
+		
 
 
         <div class="single-product-gallery-thumbs gallery-thumbs">
@@ -281,10 +282,7 @@ while($row=mysqli_fetch_array($ret))
                     <a class="horizontal-thumb active" data-target="#owl-single-product" data-slide="1" href="#slide1">
                         <img class="img-responsive"  alt="" src="assets/images/blank.gif" data-echo="admin/productimages/<?php echo htmlentities($row['id']);?>/<?php echo htmlentities($row['productImage1']);?>" />
                     </a>
-                </div>
-               
-               
-                
+                </div>                
             </div><!-- /#owl-single-product-thumbnails -->
 
             
@@ -597,7 +595,7 @@ while($rw=mysqli_fetch_array($qry))
 	<div class="product">		
 		<div class="product-image">
 			<div class="image">
-				<a href="product-details.php?pid=<?php echo htmlentities($rw['id']);?>"><img  src="assets/images/blank.gif" data-echo="admin/productimages/<?php echo htmlentities($rw['id']);?>/<?php echo htmlentities($rw['productImage1']);?>" width="150" height="240" alt=""></a>
+				<a href="product-details.php?pid=<?php echo htmlentities($rw['id']);?>"><img  src="admin/productimages/<?php echo htmlentities($rw['id']);?>/<?php echo htmlentities($rw['productImage1']);?>" width="150" height="150" alt=""></a>
 			</div><!-- /.image -->			
 
 			                   		   
