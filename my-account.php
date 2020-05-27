@@ -144,7 +144,7 @@ return true;
             <div class="container">
                 <div class="breadcrumb-inner">
                     <ul class="list-inline list-unstyled">
-                        <li><a href="index.php">Home</a></li>
+                        <li><a href="index.php">Home.</a></li>
                         <li>/</li>
                         <li class='active'>My Account</li>
                     </ul>
