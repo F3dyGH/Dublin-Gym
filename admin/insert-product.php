@@ -52,14 +52,7 @@ $_SESSION['msg']="Product Inserted Successfully !!";
 <script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
 
    <script>
-function getSubcat(val) {
-	$.ajax({
-	type: "POST",
-	data:'cat_id='+val,
-	success: function(data){
-	}
-	});
-}
+
 function selectCountry(val) {
 $("#search-box").val(val);
 $("#suggesstion-box").hide();
