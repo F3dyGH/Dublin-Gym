@@ -1,18 +1,18 @@
 
 <?php
-session_start();
-include('include/config.php');
+
+
+include('users_action.php');
 if(strlen($_SESSION['alogin'])==0)
 	{	
 header('location:index.php');
 }
 else{
- //=======Time Set bech koll action tet9ayed bel wakt fel base ========= ///
+
 date_default_timezone_set('Africa/Tunis');// change according timezone
 $currentTime = date( 'd-m-Y h:i:s A', time () );
 
-//requete Sql taa delete kahao l modification w l ajout tsyr fel front-end par l'utilisateur mch hna
-    /*wel affichage tsyr aal tableau b <?php echo htmlentities($row['esmlattribut']);?>*/
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +25,18 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 	<link type="text/css" href="css/theme.css" rel="stylesheet">
 	<link type="text/css" href="images/icons/css/font-awesome.css" rel="stylesheet">
 	<link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+	<script language="javascript" type="text/javascript">
+var popUpWin=0;
+function popUpWindow(URLStr, left, top, width, height)
+{
+ if(popUpWin)
+{
+if(!popUpWin.closed) popUpWin.close();
+}
+popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,copyhistory=yes,width='+600+',height='+600+',left='+left+', top='+top+',screenX='+left+',screenY='+top+'');
+}
+
+</script>
 </head>
 <body>
 <?php include('include/header.php');?>
@@ -40,9 +52,75 @@ $currentTime = date( 'd-m-Y h:i:s A', time () );
 							<div class="module-head">
 								<h3>Manage Users</h3>
 							</div>
-							<div class="module-body table">
-	                          
-                                <!-- Tableau d'Affichage w fy akher case men koll ligne button Supprimer lel utilisateur kahao menghyr Ajouter khater tsyr fel front-end -->
+							<br>
+							 
+	  
+                		 
+			 
+				<div class="control-group">
+                    <label class="control-label" for="basicinput">  </label>
+          
+				</div>
+			</form>
+      <?php 
+    $query="SELECT * FROM users ";
+    $stmt=$con->prepare($query);
+    $stmt->execute();
+    $result=$stmt->get_result();
+
+
+      ?>
+			 
+            <div class="module-body table">
+	<table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table-bordered table-striped display table-responsive" width="100%" >
+    <thead>
+      <tr>
+        <th>#</th>
+         
+		<th>billingpincode</th>
+        <th>shippingAddress</th>
+        <th>shippingState</th>
+        <th>shippingCity</th>
+        <th>shippingPincode</th>
+        <th>billingAddress</th>
+        <th>billingState</th>
+        <th>action</th>
+
+			</tr>
+    </thead>
+    <tbody>
+      <?php while ($row=$result->fetch_assoc()){?>
+      <tr>
+        <td><?=$row['id']  ?></td>
+         
+			<td><?=$row['billingpincode']  ?></td>
+			<td><?=$row['shippingAddress']  ?></td>
+			<td><?=$row['shippingState']  ?></td>
+			<td><?=$row['shippingCity']  ?></td>
+			<td><?=$row['shippingPincode']  ?></td>
+			<td><?=$row['billingAddress']  ?></td>
+			<td><?=$row['billingState']  ?></td>
+ 			 
+ 
+			 
+			<td>
+             	 
+             	<a href="users_action.php?delete=<?=$row['id']  ?>" title="Delete user" onclick="return confirm('Do you want to delete this record ?')" ><i class="icon-trash"></i></a> |
+				 <a href="javascript:void(0);" onClick="popUpWindow('user_details.php?details=<?=$row['id']  ?>');" title="users Details" target="_blank"><i class="icon-list"></i>|</a> 
+
+             	             </td>
+      </tr>
+    <?php }  ?>
+    </tbody>
+  </table> 
+                    </div>
+                </div>
+		</div>
+	</div>
+        </div>
+    </div>
+
+</div>
 							
                             </div>
 						</div>							
