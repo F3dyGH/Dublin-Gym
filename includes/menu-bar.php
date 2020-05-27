@@ -29,9 +29,9 @@
 								</li>
 								
 								<li><a href="trainer.php">Trainers</a></li>
+                                <li><a href="store.php">Store</a></li>
 								<li><a href="about.php">About</a></li>
 								<li><a href="contact.php">Contact</a></li>
-                                <li><a href="store.php">Store</a></li>
                                 <li>	<div class="cart" style="padding: 0px;
                                                 border: 1px solid #e1e1e1;
                                                 -webkit-border-radius: 0;
