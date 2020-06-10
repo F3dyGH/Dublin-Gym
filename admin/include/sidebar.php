@@ -67,6 +67,12 @@ $num1 = mysqli_num_rows($rt);
 									Manage Staff
                                 </a>
                             </li>
+	 <li>
+                                <a href="subs_manager.php">
+                                    <i class="menu-icon icon-group"></i>
+									Subscription
+                                </a>
+                            </li>
 						</ul>
 
 
