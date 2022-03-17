@@ -28,7 +28,7 @@ Download a local web server to run the project, click the link below:
  * Html
  * Css
  * Bootstrap
- * Some Js Frameworks (jQuery and Ajax)
+ * jQuery and Ajax
  ## Authors
  
  #### Leaders Team Members: 
